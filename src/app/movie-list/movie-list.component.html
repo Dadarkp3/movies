@@ -1,0 +1,27 @@
+<main class="display-grid container-grid">
+    <section>
+        <input [disabled]="loading" id="movie" name="movieInput" (keyup.enter)="searchMovies(movieInput, 1)" [(ngModel)]="movieInput" placeholder="Busque um filme por nome, ano ou gênero...">
+    </section>
+
+    <section *ngIf="loading" class="display-flex not-found">
+        <img src="../../assets/img/loading.svg" alt="Loading">
+    </section>
+    <div class="container" *ngIf="checkMovies()">
+        <div class="row">
+            <div *ngFor="let movie of movies | paginate: { itemsPerPage: 10, currentPage: page, totalItems: totalResults }" class="col-md-4 col-lg-3">
+                <div (click)="openMovie(movie.imdbID)" class="card h-100 link">
+                    <img class="card-img-top img-fluid" [src]="moviePoster(movie.Poster)" [alt]="movie.Title" [title]="movie.Title" alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title">{{movie?.Title}}</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section *ngIf="!checkMovies() && !loading" class="display-flex not-found">
+        <h2>Filme não encontrado...</h2>
+    </section>
+    <section *ngIf="checkMovies()" class="display-flex pagination">
+        <pagination-controls directionLinks="false" (pageChange)="getPage($event)" (click)="moveTop()"></pagination-controls>
+    </section>
+</main>

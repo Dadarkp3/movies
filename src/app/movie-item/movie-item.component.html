@@ -1,0 +1,32 @@
+<main *ngIf="!loading" class="container-item-movie">
+    <section class="display-flex movie-item-title">
+        <h2 class="item-title text-center">{{movie.Title}}</h2>
+    </section>
+    <section class="display-flex movie-item-content">
+        <div class="conteudo">
+            <h3 class="subtitle">Sinopse</h3>
+            <article class="content-info">{{movie.Plot || 'Não informado'}}</article>
+            <h3 class="subtitle">Informações</h3>
+            <div class="display-flex information-content">
+                <div class="information-content-item">
+                    <div class="title-content">Situação</div>
+                    <div class="content">{{movie.status || 'Não informado'}}</div>
+                </div>
+                <div class="information-content-item">
+                    <div class="title-content">Idioma</div>
+                    <div class="content">{{movie.Language || 'Não informado'}}</div>
+                </div>
+                <div class="information-content-item">
+                    <div class="title-content">País</div>
+                    <div class="content">{{movie.Country || 'Não informado'}}</div>
+                </div>
+            </div>
+        </div>
+        <div class="image ">
+            <img [src]="movie.Poster" [alt]="movie.Title " [title]="movie.Title ">
+        </div>
+    </section>
+</main>
+<section *ngIf="loading" class="display-flex not-found">
+    <img src="../../assets/img/loading.svg" alt="Loading">
+</section>
