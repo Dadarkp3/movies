@@ -30,6 +30,10 @@ export class MovieItemComponent implements OnInit {
       this.loading = false;
     });
   }
+  
+    moviePoster(moviePath: string): string{
+    return (moviePath.length <= 3) ? '../../assets/img/no-image.png' : moviePath; 
+  }
 
   getVideo(id){
     this.service.findTrailerbyMovieId(id).subscribe(response => {
