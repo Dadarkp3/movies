@@ -1,4 +1,4 @@
-# The MovieDB Angular User Interface
+# The OMDB Angular User Interface
 Movie Channel List - UI para Api OMDB criada em Angular.
 ![Example](https://raw.githubusercontent.com/Dadarkp3/movies/master/src/assets/readme/tela_captura.PNG)
 ![Example](https://raw.githubusercontent.com/Dadarkp3/movies/master/src/assets/readme/tela_captura_2.PNG)
