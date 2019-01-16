@@ -1,7 +1,7 @@
 # The MovieDB Angular User Interface
 Movie Channel List - UI para Api TMDB criada em Angular.
-![Example](https://raw.githubusercontent.com/Dadarkp3/movie/master/src/assets/readme/tela_captura.PNG)
-![Example](https://raw.githubusercontent.com/Dadarkp3/movie/master/src/assets/readme/tela_captura_2.PNG)
+![Example](https://raw.githubusercontent.com/Dadarkp3/movies/master/src/assets/readme/tela_captura.PNG)
+![Example](https://raw.githubusercontent.com/Dadarkp3/movies/master/src/assets/readme/tela_captura_2.PNG)
 ## BUILD E EXECUÇÃO
 ### Running locally
 
